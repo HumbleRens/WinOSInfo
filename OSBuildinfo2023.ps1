@@ -19,7 +19,7 @@ if ($cimSession) {
             $hotfixes = $hotfixes | Where-Object { $_.InstalledOn.Year -eq 2023 }
 
             if ($hotfixes) {
-                Write-Host "Installed hotfixes on $computerName in 2023:"
+                Write-Host "Installed hotfixes on $computerName in 2023"
                 $hotfixes | Select-Object -Property HotFixID, InstalledOn
             } else {
                 Write-Host "No hotfixes installed on $computerName in 2023"
